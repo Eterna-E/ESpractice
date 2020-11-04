@@ -1,0 +1,36 @@
+{
+  "bool": {
+    "should": [
+      {
+        "bool": {
+          "filter": [
+            {"term": {"start_dt": "2020-10-01"}},
+            {"term": {"end_dt": "2020-10-03"}},
+            {"term": {"time_type": "w"}}
+          ]
+        }
+      },
+      {
+        "bool": {
+          "filter": [
+            {"term": {"start_dt": "2020-10-04"}},
+            {"term": {"end_dt": "2020-10-10"}},
+            {"term": {"time_type": "w"}}
+          ]
+        }
+      },
+      {
+        "bool": {
+          "filter": [
+            {"range": {"gte": "2020-10-11", "lte": "2020-10-13"}},
+            {"term": {"time_type": "d"}},
+            
+            {"term": {"start_dt": "2020-10-11"}},
+            {"term": {"end_dt": "2020-10-11"}},
+            {"term": {"time_type": "d"}}
+          ]
+        }
+      }
+    ]
+  }
+}

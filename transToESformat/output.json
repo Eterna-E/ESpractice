@@ -1,0 +1,113 @@
+{
+ "bool": {
+  "filter": [
+   {
+    "bool": {
+     "should": [
+      {
+       "bool": {
+        "filter": [
+         {
+          "term": {
+           "start_dt": "2020-01-27"
+          }
+         },
+         {
+          "term": {
+           "end_dt": "2020-02-01"
+          }
+         },
+         {
+          "term": {
+           "time_type": "w"
+          }
+         }
+        ]
+       }
+      },
+      {
+       "bool": {
+        "filter": [
+         {
+          "term": {
+           "start_dt": "2020-02-02"
+          }
+         },
+         {
+          "term": {
+           "end_dt": "2020-02-08"
+          }
+         },
+         {
+          "term": {
+           "time_type": "w"
+          }
+         }
+        ]
+       }
+      },
+      {
+       "bool": {
+        "filter": [
+         {
+          "term": {
+           "start_dt": "2020-02-09"
+          }
+         },
+         {
+          "term": {
+           "end_dt": "2020-02-15"
+          }
+         },
+         {
+          "term": {
+           "time_type": "w"
+          }
+         }
+        ]
+       }
+      }
+     ]
+    }
+   },
+   {
+    "bool": {
+     "should": [
+      {
+       "bool": {
+        "filter": [
+         {
+          "term": {
+           "label1": "\u793e\u7fa4"
+          }
+         },
+         {
+          "term": {
+           "label2": [
+            "\u8ad6\u58c7"
+           ]
+          }
+         }
+        ]
+       }
+      },
+      {
+       "term": {
+        "label1": "\u670d\u88dd\u8207\u98fe\u54c1"
+       }
+      }
+     ]
+    }
+   },
+   {
+    "bool": {
+     "filter": {
+      "term": {
+       "source": "Behavior Tree"
+      }
+     }
+    }
+   }
+  ]
+ }
+}
