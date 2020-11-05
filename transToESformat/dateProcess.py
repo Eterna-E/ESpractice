@@ -24,19 +24,34 @@ def date_to_week(start_date,end_date):
     for i in range(0, len(ls_date), 7):
         unit_num.append(ls_date[i:i + 7])
 
-    return unit_num
-    # print(unit_num)
+    for i,week in enumerate(unit_num):
+        if len(week) == 0:
+            del unit_num[i]
 
-    # for i,week in enumerate(unit_num):
-    #     print(i,week)
-        # if start_date in week:
-        #     # print(i)
-        #     print('list size:',len(week))
-        #     print(week.index(start_date))
-        # if end_date in week:
-        #     # print(i)
-        #     print('list size:',len(week))
-        #     print(week.index(end_date)) 
+    return unit_num
 
 if __name__ == "__main__":
-    date_to_week('2020-10-01','2020-10-13')
+    # weeks = date_to_week('2020/10/01','2020/10/13')
+    # weeks = date_to_week('2020/01/27','2020/02/02')
+    weeks = date_to_week('2020/09/28','2020/10/13')
+    print(weeks)
+    date_list = []
+    for i,week in enumerate(weeks):
+        print(i,week)
+        if i == 0 or len(week) == 7:
+            first_date_month = datetime.datetime.strptime(week[0], '%Y-%m-%d').month
+            week_diff = False
+            for i,day in enumerate(week):
+                if datetime.datetime.strptime(day, '%Y-%m-%d').month != first_date_month:
+                    week_diff = True
+                    week_part1 = week[:i]
+                    week_part2 = week[i:]
+                    date_list.append((week_part1[0],week_part1[-1],'w'))
+                    date_list.append((week_part2[0],week_part2[-1],'w'))
+                    break
+            if not week_diff:
+                date_list.append((week[0],week[-1],'w'))
+        elif i == len(weeks)-1 and len(week) != 7 and len(weeks) != 1:
+            for day in week:
+                date_list.append((day,day,'d'))
+    print(date_list)

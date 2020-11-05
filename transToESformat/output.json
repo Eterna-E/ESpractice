@@ -9,33 +9,12 @@
         "filter": [
          {
           "term": {
-           "start_dt": "2020-01-27"
+           "start_dt": "2020-09-28"
           }
          },
          {
           "term": {
-           "end_dt": "2020-02-01"
-          }
-         },
-         {
-          "term": {
-           "time_type": "w"
-          }
-         }
-        ]
-       }
-      },
-      {
-       "bool": {
-        "filter": [
-         {
-          "term": {
-           "start_dt": "2020-02-02"
-          }
-         },
-         {
-          "term": {
-           "end_dt": "2020-02-08"
+           "end_dt": "2020-09-30"
           }
          },
          {
@@ -51,17 +30,101 @@
         "filter": [
          {
           "term": {
-           "start_dt": "2020-02-09"
+           "start_dt": "2020-10-01"
           }
          },
          {
           "term": {
-           "end_dt": "2020-02-15"
+           "end_dt": "2020-10-03"
           }
          },
          {
           "term": {
            "time_type": "w"
+          }
+         }
+        ]
+       }
+      },
+      {
+       "bool": {
+        "filter": [
+         {
+          "term": {
+           "start_dt": "2020-10-04"
+          }
+         },
+         {
+          "term": {
+           "end_dt": "2020-10-10"
+          }
+         },
+         {
+          "term": {
+           "time_type": "w"
+          }
+         }
+        ]
+       }
+      },
+      {
+       "bool": {
+        "filter": [
+         {
+          "term": {
+           "start_dt": "2020-10-11"
+          }
+         },
+         {
+          "term": {
+           "end_dt": "2020-10-11"
+          }
+         },
+         {
+          "term": {
+           "time_type": "d"
+          }
+         }
+        ]
+       }
+      },
+      {
+       "bool": {
+        "filter": [
+         {
+          "term": {
+           "start_dt": "2020-10-12"
+          }
+         },
+         {
+          "term": {
+           "end_dt": "2020-10-12"
+          }
+         },
+         {
+          "term": {
+           "time_type": "d"
+          }
+         }
+        ]
+       }
+      },
+      {
+       "bool": {
+        "filter": [
+         {
+          "term": {
+           "start_dt": "2020-10-13"
+          }
+         },
+         {
+          "term": {
+           "end_dt": "2020-10-13"
+          }
+         },
+         {
+          "term": {
+           "time_type": "d"
           }
          }
         ]
