@@ -1,0 +1,48 @@
+{
+  "bool": {
+    "should": [
+      {
+        "bool": {
+          "filter": [
+            {
+              "term": {
+                "start_date": "2020-02-01"
+              }
+            },
+            {
+              "term": {
+                "end_date": "2020-02-01"
+              }
+            },
+            {
+              "term": {
+                "date_type": "d"
+              }
+            }
+          ]
+        }
+      },
+      {
+        "bool": {
+          "filter": [
+            {
+              "term": {
+                "start_date": "2020-02-02"
+              }
+            },
+            {
+              "term": {
+                "end_date": "2020-02-02"
+              }
+            },
+            {
+              "term": {
+                "date_type": "d"
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
